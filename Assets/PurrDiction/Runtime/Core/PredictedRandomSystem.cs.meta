@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: d6a7406ca0c64592a640ecaf883fd8eb
+timeCreated: 1768843883
+AssetOrigin:
+  serializedVersion: 1
+  productId: 329734
+  packageName: 'PurrDiction: Client Side Prediction For PurrNet'
+  packageVersion: v1.2.3
+  assetPath: Assets/PurrDiction/Runtime/Core/PredictedRandomSystem.cs
+  uploadId: 867614

@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 01373063152d4f939ed3c8bbced51291
+timeCreated: 1747405884
+AssetOrigin:
+  serializedVersion: 1
+  productId: 329734
+  packageName: 'PurrDiction: Client Side Prediction For PurrNet'
+  packageVersion: v1.2.3
+  assetPath: Assets/PurrDiction/Runtime/Core/PredictedTimeState.cs
+  uploadId: 867614
