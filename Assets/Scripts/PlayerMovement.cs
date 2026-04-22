@@ -6,6 +6,7 @@ public class PlayerMovement : PredictedIdentity<PlayerMovement.PlayerInput, Play
     [SerializeField] private PredictedRigidbody rigidBody;
     [SerializeField] private float speed = 5.0f;
     [SerializeField] private float jumpForce = 10.0f;
+    [SerializeField] private GameObject gun;
     private bool grounded;
 
     [Header("Camera")]
@@ -24,10 +25,16 @@ public class PlayerMovement : PredictedIdentity<PlayerMovement.PlayerInput, Play
         if (input.cameraForward.HasValue)
         {
             var forwardDir = input.cameraForward.Value;
+            var gunDir = input.cameraForward.Value;
             forwardDir.y = 0.0f;
+            gunDir.z = 0.0f;
 
             if (forwardDir.sqrMagnitude > 0.0001f)
+            {
                 rigidBody.MoveRotation(Quaternion.LookRotation(forwardDir.normalized));
+                gun.transform.rotation = Quaternion.Euler(0, cam.transform.rotation.eulerAngles.y, 0);
+            }
+                
         }
 
         if (input.jump && grounded)

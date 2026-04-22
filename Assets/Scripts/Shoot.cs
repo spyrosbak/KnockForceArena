@@ -6,6 +6,8 @@ public class Shoot : PredictedIdentity<Shoot.Input, Shoot.State>
     [SerializeField] private PlayerMovement player;
     [SerializeField] private Rigidbody projectile;
     [SerializeField] private Transform gunPoint;
+    [SerializeField] private LineRenderer aimLine;
+    [SerializeField] private Transform aimEnd;
     [SerializeField] private float shootForce = 20.0f;
 
     protected override void Simulate(Input input, ref State state, float delta)
@@ -24,7 +26,9 @@ public class Shoot : PredictedIdentity<Shoot.Input, Shoot.State>
             if (!createdObject.Value.TryGetComponent(predictionManager, out PredictedRigidbody rb))
                 return;
 
-            rb.AddForce(realDirection * shootForce, ForceMode.Impulse);
+            var ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
+            rb.velocity = ray.direction * shootForce;
+            rb.AddForce(ray.direction * shootForce, ForceMode.Impulse);
         }
         else
         {
@@ -35,6 +39,9 @@ public class Shoot : PredictedIdentity<Shoot.Input, Shoot.State>
     protected override void UpdateInput(ref Input input)
     {
         input.shoot |= InputManager.Instance.fireAction.triggered;
+
+        aimLine.SetPosition(0, gunPoint.position);
+        aimLine.SetPosition(1, aimEnd.position);
     }
 
     protected override void ModifyExtrapolatedInput(ref Input input)
