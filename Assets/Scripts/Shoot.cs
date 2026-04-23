@@ -9,6 +9,12 @@ public class Shoot : PredictedIdentity<Shoot.Input, Shoot.State>
     [SerializeField] private LineRenderer aimLine;
     [SerializeField] private Transform aimEnd;
     [SerializeField] private float shootForce = 20.0f;
+    private Camera mainCamera;
+
+    protected override void LateAwake()
+    {
+        mainCamera = Camera.main;
+    }
 
     protected override void Simulate(Input input, ref State state, float delta)
     {
@@ -18,7 +24,7 @@ public class Shoot : PredictedIdentity<Shoot.Input, Shoot.State>
 
             var realDirection = new Vector3(input.direction.x, input.direction.y, input.direction.z);
             var spawnPoint = gunPoint.position + realDirection;
-            var createdObject = predictionManager.hierarchy.Create(projectile.gameObject, spawnPoint, Quaternion.identity);
+            var createdObject = predictionManager.hierarchy.Create(projectile.gameObject, spawnPoint, mainCamera.transform.rotation);
 
             if (!createdObject.HasValue)
                 return;
@@ -26,8 +32,7 @@ public class Shoot : PredictedIdentity<Shoot.Input, Shoot.State>
             if (!createdObject.Value.TryGetComponent(predictionManager, out PredictedRigidbody rb))
                 return;
 
-            var ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
-            rb.velocity = ray.direction * shootForce;
+            Ray ray = mainCamera.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
             rb.AddForce(ray.direction * shootForce, ForceMode.Impulse);
         }
         else
@@ -52,7 +57,7 @@ public class Shoot : PredictedIdentity<Shoot.Input, Shoot.State>
     protected override void GetFinalInput(ref Input input)
     {
         
-        input.direction = Camera.main.transform.forward;
+        input.direction = mainCamera.transform.forward;
     }
 
     protected override void SanitizeInput(ref Input input)
