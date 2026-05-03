@@ -1446,7 +1446,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1336448287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1519,7 +1519,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: PurrNet.Runtime::PurrNet.PlayerSpawner
   playerPrefab: {fileID: 0}
-  _playerPrefab: {fileID: 5827284574279241999, guid: 1519f8102b73a8a4faabf5605f028ed9, type: 3}
+  _playerPrefab: {fileID: 4740130547541915945, guid: fdaa9333da5daa0488c571d41dfede33, type: 3}
   _ignoreNetworkRules: 0
   spawnPoints:
   - {fileID: 39213442}
@@ -1553,11 +1553,47 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InputManager
   inputActions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  moveAction:
+    m_Name: Move
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: e3bc4e93-1604-42f8-83f4-bfff85ad716b
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  lookAction:
+    m_Name: Look
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: ca8784a0-fa40-475f-90bb-44310e39e844
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  jumpAction:
+    m_Name: Jump
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: baebf9c4-dc59-471f-bbb5-bb1b81e8992d
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
   interactAction:
     m_Name: Interact
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: e097fe8f-675f-45c1-b05d-b73e08d3ffd5
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  fireAction:
+    m_Name: Fire
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: ffb3536a-af04-494e-8707-e0617154d789
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []

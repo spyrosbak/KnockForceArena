@@ -1,5 +1,6 @@
 using UnityEngine;
 using PurrNet.Prediction;
+using PurrNet;
 
 public class Shoot : PredictedIdentity<Shoot.Input, Shoot.State>
 {

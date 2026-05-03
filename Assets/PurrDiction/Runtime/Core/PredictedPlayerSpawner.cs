@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Collections;
 using PurrNet.Logging;
 using PurrNet.Packing;
 using PurrNet.Pooling;
@@ -93,9 +94,10 @@ namespace PurrNet.Prediction
 
     public class PredictedPlayerSpawner : DeterministicIdentity<PlayerSpawnerState>
     {
-        [SerializeField] private GameObject _playerPrefab;
+        [SerializeField] public GameObject _playerPrefab;
         [SerializeField, PurrLock] private bool _destroyOnDisconnect;
         [SerializeField] private List<Transform> spawnPoints = new List<Transform>();
+        
 
         private void Awake() => CleanupSpawnPoints();
 

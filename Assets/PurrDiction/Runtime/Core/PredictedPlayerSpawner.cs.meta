@@ -1,5 +1,12 @@
 fileFormatVersion: 2
 guid: 1a1392aa1bc3d3b4a9ef31b6e6d8d4b5
+AssetOrigin:
+  serializedVersion: 1
+  productId: 329734
+  packageName: 'PurrDiction: Client Side Prediction For PurrNet'
+  packageVersion: v1.2.3
+  assetPath: Assets/PurrDiction/Runtime/Core/PredictedPlayerSpawner.cs
+  uploadId: 867614
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
@@ -9,10 +16,3 @@ MonoImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 329734
-  packageName: 'PurrDiction: Client Side Prediction For PurrNet'
-  packageVersion: v1.2.3
-  assetPath: Assets/PurrDiction/Runtime/Core/PredictedPlayerSpawner.cs
-  uploadId: 867614
