@@ -21,11 +21,6 @@ public class GameManager : NetworkBehaviour
 
         //characterId = PlayerData.Instance.data.playableCharacterId;
         //playerNameText.text = PlayerData.Instance.data.playerName;
-    }
-
-    protected override void OnSpawned()
-    {
-        base.OnSpawned();
 
         SetCharacter();
     }
