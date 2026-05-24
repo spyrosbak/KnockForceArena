@@ -15,13 +15,13 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        if(networkManager.players.Count <= 1)
-            networkManager.StartServer();
+        //if(networkManager.players.Count <= 1)
+            //networkManager.StartServer();
 
-        networkManager.StartClient();
+        //networkManager.StartClient();
 
         //characterId = PlayerData.Instance.data.playableCharacterId;
-        playerNameText.text = PlayerData.Instance.data.playerName;
+        //playerNameText.text = PlayerData.Instance.data.playerName;
     }
 
     //private void Start()

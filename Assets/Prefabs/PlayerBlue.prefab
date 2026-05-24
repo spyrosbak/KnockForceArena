@@ -1008,10 +1008,7 @@ GameObject:
   - component: {fileID: 7283708059941784010}
   - component: {fileID: 3664589791869349999}
   - component: {fileID: 3881153474862652269}
-  - component: {fileID: 4621245346978844683}
-  - component: {fileID: 3175420625969081153}
   - component: {fileID: 2717326906512547725}
-  - component: {fileID: 1089034370471128806}
   m_Layer: 0
   m_Name: PlayerBlue
   m_TagString: Player
@@ -1193,62 +1190,6 @@ MonoBehaviour:
   _characterControllerPatch: 0
   _ownerAuth: 1
   _interpolationTiming: 0
---- !u!114 &4621245346978844683
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4740130547541915945}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39d5e4b97b1615f4aae984a3d5f4235f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: PurrNet.Runtime::PurrNet.NetworkOwnershipToggle
-  _isSetup: 0
-  _prefabId: -2147483648
-  _componentIndex: -2147483648
-  _shouldBePooled: 0
-  _parent: {fileID: 0}
-  _invertedPathToNearestParent: 
-  _directChildren: []
-  _networkRules: {fileID: 0}
-  _visitiblityRules: {fileID: 0}
-  _components:
-  - target: {fileID: 3664589791869349999}
-    activeAsOwner: 1
-  - target: {fileID: 2717326906512547725}
-    activeAsOwner: 1
-  _gameObjects:
-  - target: {fileID: 3193818309032376656}
-    activeAsOwner: 1
-  _toActivate: []
-  _toDeactivate: []
-  _toEnable: []
-  _toDisable: []
---- !u!114 &3175420625969081153
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4740130547541915945}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ed611c53974da7498d5fd3a254377ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WeaponSelect
-  _isSetup: 0
-  _prefabId: -2147483648
-  _componentIndex: -2147483648
-  _shouldBePooled: 0
-  _parent: {fileID: 0}
-  _invertedPathToNearestParent: 
-  _directChildren: []
-  _networkRules: {fileID: 0}
-  _visitiblityRules: {fileID: 0}
-  weaponPrefab: {fileID: 7063132489935760917, guid: d2379b697e225f8408a21c689312886f, type: 3}
-  weaponSlot: {fileID: 7636341078634963391}
 --- !u!114 &2717326906512547725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1276,32 +1217,6 @@ MonoBehaviour:
     _sendIntervalInSeconds: 0
   healtText: {fileID: 3874533971076053890}
   speach: Hello, stranger!
---- !u!114 &1089034370471128806
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4740130547541915945}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cb763cfb0fbf2c44b3587223c4aad1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: PurrNet.Runtime::PurrNet.NetworkReflection
-  _isSetup: 0
-  _prefabId: -2147483648
-  _componentIndex: -2147483648
-  _shouldBePooled: 0
-  _parent: {fileID: 0}
-  _invertedPathToNearestParent: 
-  _directChildren: []
-  _networkRules: {fileID: 0}
-  _visitiblityRules: {fileID: 0}
-  _trackedBehaviour: {fileID: 0}
-  _trackedFields:
-  - type: 1
-    name: emitting
-  _ownerAuth: 1
 --- !u!1 &4946375913450973871
 GameObject:
   m_ObjectHideFlags: 0
