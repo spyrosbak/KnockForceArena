@@ -22,7 +22,7 @@ public class GameManager : NetworkBehaviour
         //characterId = PlayerData.Instance.data.playableCharacterId;
         //playerNameText.text = PlayerData.Instance.data.playerName;
 
-        SetCharacter();
+        
     }
 
     [ObserversRpc]
@@ -49,4 +49,9 @@ public class GameManager : NetworkBehaviour
     //            break;
     //    }
     //}
+
+    private void Start()
+    {
+        SetCharacter();
+    }
 }
