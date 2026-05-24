@@ -25,10 +25,10 @@ public class GameManager : NetworkBehaviour
         
     }
 
-    [ObserversRpc]
+    [ServerRpc(requireOwnership: false)]
     public void SetCharacter()
     {
-        spawner.playerPrefab = PlayerData.Instance.data.character;
+        spawner._playerPrefab = PlayerData.Instance.data.character;
     }
 
     //private void Start()
@@ -50,8 +50,10 @@ public class GameManager : NetworkBehaviour
     //    }
     //}
 
-    private void Start()
+    protected override void OnSpawned()
     {
+        base.OnSpawned();
+
         SetCharacter();
     }
 }

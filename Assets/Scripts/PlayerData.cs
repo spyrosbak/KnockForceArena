@@ -27,7 +27,7 @@ public class PlayerData : MonoBehaviour
     {
         //public CharId.ID playableCharacterId;
         public string playerName;
-        public NetworkIdentity character;
+        public GameObject character;
     }
     public Data data;
 

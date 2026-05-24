@@ -28,7 +28,7 @@ public class CharacterSelection : MonoBehaviour
     }
     */
 
-    public void SelectCharacter(NetworkIdentity pc)
+    public void SelectCharacter(GameObject pc)
     {
         PlayerData.Instance.data.character = pc;
     }
