@@ -24,7 +24,7 @@ namespace PurrNet
     [AddComponentMenu("PurrNet/Player Spawner")]
     public class PlayerSpawner : PurrMonoBehaviour
     {
-        [SerializeField, HideInInspector] private NetworkIdentity playerPrefab;
+        [SerializeField, HideInInspector] public NetworkIdentity playerPrefab;
         [SerializeField] private GameObject _playerPrefab;
         [Tooltip("Even if rules are to not despawn on disconnect, this will ignore that and always spawn a player.")]
         [SerializeField] private bool _ignoreNetworkRules;

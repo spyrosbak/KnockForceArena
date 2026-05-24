@@ -3,25 +3,37 @@ using PurrNet.Prediction;
 using TMPro;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class GameManager : NetworkBehaviour
 {
-    [SerializeField] private NetworkManager networkManager;
-    [SerializeField] private PredictedPlayerSpawner spawner;
+    [SerializeField] private PlayerSpawner spawner;
 
-    [Header("UI")]
-    [SerializeField] private TextMeshProUGUI playerNameText;
+    //[Header("UI")]
+    //[SerializeField] private TextMeshProUGUI playerNameText;
 
     //private CharId.ID characterId;
 
     private void Awake()
     {
         //if(networkManager.players.Count <= 1)
-            //networkManager.StartServer();
+        //networkManager.StartServer();
 
         //networkManager.StartClient();
 
         //characterId = PlayerData.Instance.data.playableCharacterId;
         //playerNameText.text = PlayerData.Instance.data.playerName;
+    }
+
+    protected override void OnSpawned()
+    {
+        base.OnSpawned();
+
+        SetCharacter();
+    }
+
+    [ObserversRpc]
+    public void SetCharacter()
+    {
+        spawner.playerPrefab = PlayerData.Instance.data.character;
     }
 
     //private void Start()

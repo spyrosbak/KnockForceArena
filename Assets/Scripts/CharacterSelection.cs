@@ -1,12 +1,14 @@
+using PurrNet;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class CharacterSelection : MonoBehaviour
 {
+    /*
     [SerializeField] private CharId.ID characterId;
     [SerializeField] private Image checkmarkIcon;
     private InitializeLobby lobbyInitializer;
-
+    
     private void Awake()
     {
         lobbyInitializer = FindFirstObjectByType<InitializeLobby>();
@@ -23,5 +25,11 @@ public class CharacterSelection : MonoBehaviour
     private void RefreshCharacterList()
     {
         lobbyInitializer.DeselectAllCharacters();
+    }
+    */
+
+    public void SelectCharacter(NetworkIdentity pc)
+    {
+        PlayerData.Instance.data.character = pc;
     }
 }

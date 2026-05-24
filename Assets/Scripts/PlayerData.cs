@@ -1,4 +1,5 @@
 using PurrLobby;
+using PurrNet;
 using PurrNet.Prediction;
 using System;
 using UnityEngine;
@@ -24,8 +25,9 @@ public class PlayerData : MonoBehaviour
 
     [Serializable] public struct Data
     {
-        public CharId.ID playableCharacterId;
+        //public CharId.ID playableCharacterId;
         public string playerName;
+        public NetworkIdentity character;
     }
     public Data data;
 
